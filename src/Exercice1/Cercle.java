@@ -1,10 +1,12 @@
 package Exercice1;
 
 public class Cercle {
+
     private double rayon;
 
     public Cercle() {
         super();
+        rayon = 0;
     }
 
     public Cercle(double rayon) {
@@ -20,7 +22,7 @@ public class Cercle {
     }
 
     public double airCercle(){
-        return Math.PI * Math.pow(rayon,2);
+        return Math.PI * Math.pow(rayon, 2);
     }
 
     public double perimetreCercle(){

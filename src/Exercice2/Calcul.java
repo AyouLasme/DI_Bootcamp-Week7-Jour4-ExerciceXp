@@ -3,6 +3,7 @@ package Exercice2;
 import java.util.Scanner;
 
 public class Calcul {
+
     public static void calcul(){
         Scanner sc = new Scanner(System.in);
         System.out.println("entrer un premier nombre");
@@ -22,13 +23,13 @@ public class Calcul {
     }
 
     private static int calculProduit(int x, int y, int z){
-        int produit = x * y * z;
+        int produit = Math.multiplyExact(Math.multiplyExact(x, y), z);
         return produit;
     }
 
     private static int calculSum(int x, int y, int z){
-        int somme = Integer.sum(Integer.sum(x, y), z);
-        return somme;
+        int sum =  Math.addExact(Math.addExact(x, y), z);
+        return sum;
     }
 
     private static int calculMoyenne(int x, int y, int z){
@@ -41,4 +42,5 @@ public class Calcul {
         int grand = Math.max(Math.max(x, y), z);
         return new int[]{petit, grand} ;
     }
+
 }
